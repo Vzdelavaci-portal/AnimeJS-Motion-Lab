@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AnimeJS Motion Lab – modern web animations and interactive UI effects built with Anime.js."
+    >
+
+    <title>AnimeJS Motion Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">A</span>
+
+            <span>
+                AnimeJS
+                <strong>Motion Lab</strong>
+            </span>
+        </a>
+
+        <nav class="navigation">
+            <a href="#projects">Projects</a>
+
+            <a
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                Creative web animations
+            </div>
+
+            <h1>
+                Bring websites
+                <span>to life.</span>
+            </h1>
+
+            <p>
+                A growing collection of modern animations,
+                interactive UI effects and creative experiments
+                built with Anime.js.
+            </p>
+
+            <a href="#projects" class="hero-button">
+                <span>Explore projects</span>
+                <span class="hero-button-arrow">↓</span>
+            </a>
+
+            <div class="hero-visual">
+
+                <div class="orbit orbit-one">
+                    <span class="orbit-dot"></span>
+                </div>
+
+                <div class="orbit orbit-two">
+                    <span class="orbit-dot"></span>
+                </div>
+
+                <div class="orbit orbit-three">
+                    <span class="orbit-dot"></span>
+                </div>
+
+                <div class="hero-core">
+                    <span>anime</span>
+                    <strong>.js</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="projects-section" id="projects">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        PROJECTS
+                    </span>
+
+                    <h2>
+                        Motion experiments
+                    </h2>
+                </div>
+
+                <p>
+                    Each project is a standalone animation created
+                    with HTML, CSS, JavaScript and Anime.js.
+                </p>
+
+            </div>
+
+            <div class="filters">
+                <button class="filter-button active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-button" data-filter="buttons">
+                    Buttons
+                </button>
+            </div>
+
+            <div class="projects-grid">
+
+                <a
+                    href="01-MagneticButton/index.html"
+                    class="project-card"
+                    data-category="buttons"
+                >
+
+                    <div class="project-preview magnetic-preview">
+
+                        <button
+                            class="preview-button"
+                            type="button"
+                            tabindex="-1"
+                        >
+                            <span>EXPLORE</span>
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Magnetic Button
+                        </h3>
+
+                        <p>
+                            An interactive button that smoothly follows
+                            the cursor and returns with a spring animation.
+                        </p>
+
+                        <div class="project-footer">
+
+                            <div class="tags">
+                                <span>Anime.js</span>
+                                <span>Button</span>
+                            </div>
+
+                            <span class="open-project">
+                                Open Demo →
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div>
+            <strong>AnimeJS Motion Lab</strong>
+
+            <span>
+                Creative web animations powered by Anime.js.
+            </span>
+        </div>
+
+        <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            View on GitHub ↗
+        </a>
+
+    </footer>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
