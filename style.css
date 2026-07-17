@@ -764,3 +764,59 @@ button {
         transition-duration: 0.01ms !important;
     }
 }
+
+.typewriter-preview {
+    background:
+        radial-gradient(
+            circle,
+            rgba(70, 232, 224, 0.18),
+            transparent 65%
+        );
+}
+
+.mini-terminal {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    min-width: 250px;
+    padding: 20px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+
+    color: #58e39b;
+    background: rgba(5, 5, 10, 0.82);
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.4);
+}
+
+.mini-prompt {
+    margin-right: 10px;
+
+    color: #46e8e0;
+}
+
+.mini-cursor {
+    width: 2px;
+    height: 16px;
+
+    margin-left: 4px;
+
+    background: #46e8e0;
+
+    animation:
+        miniCursorBlink 0.8s steps(1) infinite;
+}
+
+@keyframes miniCursorBlink {
+    50% {
+        opacity: 0;
+    }
+}
