@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Interactive glowing cursor trail built with Anime.js."
+    >
+
+    <title>Cursor Trail | AnimeJS Motion Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="scene">
+
+        <div class="background-grid"></div>
+
+        <div class="background-glow glow-one"></div>
+        <div class="background-glow glow-two"></div>
+        <div class="background-glow glow-three"></div>
+
+        <div class="cursor-trail" aria-hidden="true"></div>
+
+        <div class="custom-cursor" aria-hidden="true">
+            <span class="cursor-center"></span>
+        </div>
+
+        <section class="content">
+
+            <div class="series-label">
+                <span class="series-dot"></span>
+                ANIME.JS MOTION LAB
+            </div>
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+            <h1>
+                Cursor
+                <span>Trail</span>
+            </h1>
+
+            <p class="description">
+                Move your cursor around the screen and create a
+                colorful trail of glowing particles.
+            </p>
+
+            <div class="interaction-hint">
+
+                <div class="mouse-icon">
+                    <span class="mouse-wheel"></span>
+                </div>
+
+                <span>
+                    Move your cursor
+                </span>
+
+            </div>
+
+            <div class="statistics">
+
+                <div class="stat">
+                    <span class="stat-value" id="particleCount">
+                        00
+                    </span>
+
+                    <span class="stat-label">
+                        PARTICLES
+                    </span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-value" id="cursorSpeed">
+                        00
+                    </span>
+
+                    <span class="stat-label">
+                        SPEED
+                    </span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-value">
+                        LIVE
+                    </span>
+
+                    <span class="stat-label">
+                        STATUS
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="corner-label corner-left">
+            HTML · CSS · JAVASCRIPT
+        </div>
+
+        <div class="corner-label corner-right">
+            POWERED BY ANIME.JS
+        </div>
+
+    </main>
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+</body>
+</html>
