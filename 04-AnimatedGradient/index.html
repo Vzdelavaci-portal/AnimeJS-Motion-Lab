@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Interactive animated mesh gradient built with Anime.js."
+    >
+
+    <title>Animated Gradient | AnimeJS Motion Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="scene">
+
+        <div class="mesh-background" aria-hidden="true">
+
+            <div class="gradient-blob blob-purple"></div>
+            <div class="gradient-blob blob-blue"></div>
+            <div class="gradient-blob blob-pink"></div>
+            <div class="gradient-blob blob-orange"></div>
+            <div class="gradient-blob blob-cyan"></div>
+            <div class="gradient-blob blob-center"></div>
+
+        </div>
+
+        <div class="light-ring ring-one"></div>
+        <div class="light-ring ring-two"></div>
+
+        <div class="noise-overlay"></div>
+        <div class="vignette"></div>
+
+        <section class="hero">
+
+            <div class="top-label">
+                <span class="label-dot"></span>
+                ANIME.JS MOTION LAB
+            </div>
+
+            <div class="glass-card">
+
+                <div class="card-shine"></div>
+
+                <div class="project-label">
+                    PROJECT 04
+                </div>
+
+                <h1>
+                    Animated
+                    <span>Gradient</span>
+                </h1>
+
+                <p>
+                    A living mesh gradient made from layered colors,
+                    soft light and smooth Anime.js motion.
+                </p>
+
+                <div class="controls">
+
+                    <button
+                        class="control-button active"
+                        data-theme="aurora"
+                        type="button"
+                    >
+                        <span class="theme-dot aurora-dot"></span>
+                        Aurora
+                    </button>
+
+                    <button
+                        class="control-button"
+                        data-theme="sunset"
+                        type="button"
+                    >
+                        <span class="theme-dot sunset-dot"></span>
+                        Sunset
+                    </button>
+
+                    <button
+                        class="control-button"
+                        data-theme="ocean"
+                        type="button"
+                    >
+                        <span class="theme-dot ocean-dot"></span>
+                        Ocean
+                    </button>
+
+                </div>
+
+                <div class="status-row">
+
+                    <div class="status-item">
+                        <span class="status-value">
+                            06
+                        </span>
+
+                        <span class="status-label">
+                            COLOR LAYERS
+                        </span>
+                    </div>
+
+                    <div class="status-divider"></div>
+
+                    <div class="status-item">
+                        <span class="status-value">
+                            LIVE
+                        </span>
+
+                        <span class="status-label">
+                            ANIMATION
+                        </span>
+                    </div>
+
+                    <div class="status-divider"></div>
+
+                    <div class="status-item">
+                        <span class="status-value">
+                            60
+                        </span>
+
+                        <span class="status-label">
+                            FPS
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="interaction-hint">
+                <div class="cursor-icon">
+                    <span></span>
+                </div>
+
+                Move your cursor to shift the gradient
+            </div>
+
+        </section>
+
+        <div class="corner-text corner-left">
+            HTML · CSS · JAVASCRIPT
+        </div>
+
+        <div class="corner-text corner-right">
+            POWERED BY ANIME.JS
+        </div>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
