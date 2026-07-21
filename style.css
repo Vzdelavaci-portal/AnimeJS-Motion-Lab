@@ -958,3 +958,171 @@ button {
     }
 
 }
+
+
+.gradient-preview {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #15152b 0%,
+            #080811 65%,
+            #030306 100%
+        );
+}
+
+.gradient-preview::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(0, 0, 0, 0.35) 100%
+        );
+
+    pointer-events: none;
+}
+
+.preview-blob {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    opacity: 0.8;
+    filter: blur(35px);
+
+    mix-blend-mode: screen;
+
+    animation:
+        previewGradientMove 7s ease-in-out infinite alternate;
+}
+
+.preview-purple {
+    top: -25px;
+    left: -15px;
+
+    background: #7c3aed;
+}
+
+.preview-blue {
+    top: -20px;
+    right: -25px;
+
+    background: #2563eb;
+
+    animation-delay: -1.5s;
+}
+
+.preview-pink {
+    right: 5px;
+    bottom: -35px;
+
+    background: #db2777;
+
+    animation-delay: -3s;
+}
+
+.preview-cyan {
+    bottom: -30px;
+    left: 15px;
+
+    background: #06b6d4;
+
+    animation-delay: -4.5s;
+}
+
+.gradient-preview-card {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 17px 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.16),
+            rgba(255, 255, 255, 0.05)
+        );
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(15px);
+
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    animation:
+        previewCardFloat 4s ease-in-out infinite;
+}
+
+.gradient-preview-card strong {
+    margin-top: 3px;
+
+    color: #ffffff;
+
+    font-size: 1.05rem;
+    letter-spacing: -0.03em;
+    text-transform: none;
+}
+
+@keyframes previewGradientMove {
+    0% {
+        transform:
+            translate3d(-15px, -10px, 0)
+            scale(0.9);
+    }
+
+    50% {
+        transform:
+            translate3d(20px, 15px, 0)
+            scale(1.15);
+    }
+
+    100% {
+        transform:
+            translate3d(-5px, 25px, 0)
+            scale(0.95);
+    }
+}
+
+@keyframes previewCardFloat {
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotateX(0deg)
+            rotateY(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-6px)
+            rotateX(3deg)
+            rotateY(-3deg);
+    }
+}
