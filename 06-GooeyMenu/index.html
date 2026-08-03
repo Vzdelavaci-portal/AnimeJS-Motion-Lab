@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Interactive gooey navigation menu built with Anime.js."
+    >
+
+    <title>Gooey Menu | AnimeJS Motion Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SVG filter used for the liquid gooey effect -->
+    <svg
+        class="svg-filters"
+        width="0"
+        height="0"
+        aria-hidden="true"
+    >
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation="12"
+                    result="blur"
+                />
+
+                <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="
+                        1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 24 -10
+                    "
+                    result="gooey"
+                />
+
+                <feComposite
+                    in="SourceGraphic"
+                    in2="gooey"
+                    operator="atop"
+                />
+            </filter>
+        </defs>
+    </svg>
+
+    <main class="scene">
+
+        <div class="background-grid"></div>
+
+        <div class="background-glow glow-one"></div>
+        <div class="background-glow glow-two"></div>
+        <div class="background-glow glow-three"></div>
+
+        <div class="floating-shape shape-one"></div>
+        <div class="floating-shape shape-two"></div>
+        <div class="floating-shape shape-three"></div>
+
+        <section class="content">
+
+            <div class="series-label">
+                <span class="series-dot"></span>
+                ANIME.JS MOTION LAB
+            </div>
+
+            <div class="project-number">
+                PROJECT 06
+            </div>
+
+            <h1>
+                Gooey
+                <span>Menu</span>
+            </h1>
+
+            <p class="description">
+                Click the center button and watch the navigation
+                melt into a smooth liquid interface.
+            </p>
+
+            <div class="menu-stage">
+
+                <div class="gooey-layer">
+
+                    <span class="gooey-bridge bridge-one"></span>
+                    <span class="gooey-bridge bridge-two"></span>
+                    <span class="gooey-bridge bridge-three"></span>
+                    <span class="gooey-bridge bridge-four"></span>
+                    <span class="gooey-bridge bridge-five"></span>
+
+                    <span class="gooey-item gooey-item-one"></span>
+                    <span class="gooey-item gooey-item-two"></span>
+                    <span class="gooey-item gooey-item-three"></span>
+                    <span class="gooey-item gooey-item-four"></span>
+                    <span class="gooey-item gooey-item-five"></span>
+
+                    <span class="gooey-main"></span>
+
+                </div>
+
+                <nav
+                    class="menu"
+                    aria-label="Gooey navigation"
+                >
+
+                    <a
+                        href="#"
+                        class="menu-item item-one"
+                        aria-label="Home"
+                        data-label="Home"
+                    >
+                        <span class="menu-icon">⌂</span>
+                    </a>
+
+                    <a
+                        href="#"
+                        class="menu-item item-two"
+                        aria-label="Profile"
+                        data-label="Profile"
+                    >
+                        <span class="menu-icon">●</span>
+                    </a>
+
+                    <a
+                        href="#"
+                        class="menu-item item-three"
+                        aria-label="Messages"
+                        data-label="Messages"
+                    >
+                        <span class="menu-icon">✉</span>
+                    </a>
+
+                    <a
+                        href="#"
+                        class="menu-item item-four"
+                        aria-label="Favorites"
+                        data-label="Favorites"
+                    >
+                        <span class="menu-icon">♥</span>
+                    </a>
+
+                    <a
+                        href="#"
+                        class="menu-item item-five"
+                        aria-label="Settings"
+                        data-label="Settings"
+                    >
+                        <span class="menu-icon">⚙</span>
+                    </a>
+
+                    <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                    >
+                        <span class="toggle-line line-one"></span>
+                        <span class="toggle-line line-two"></span>
+                    </button>
+
+                </nav>
+
+                <div class="menu-label">
+                    <span class="menu-label-dot"></span>
+
+                    <span class="menu-label-text">
+                        Menu closed
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="features">
+
+                <div class="feature">
+                    <span class="feature-value">SVG</span>
+                    <span class="feature-label">GOOEY FILTER</span>
+                </div>
+
+                <div class="feature">
+                    <span class="feature-value">05</span>
+                    <span class="feature-label">MENU ITEMS</span>
+                </div>
+
+                <div class="feature">
+                    <span class="feature-value">LIVE</span>
+                    <span class="feature-label">INTERACTION</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="corner-label corner-left">
+            HTML · CSS · JAVASCRIPT
+        </div>
+
+        <div class="corner-label corner-right">
+            POWERED BY ANIME.JS
+        </div>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
