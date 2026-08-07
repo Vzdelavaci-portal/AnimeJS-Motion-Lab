@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Responsive animated navigation bar built with Anime.js."
+    >
+
+    <title>Animated Navbar | AnimeJS Motion Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="#home" class="logo" aria-label="Motion home">
+
+                <span class="logo-symbol">
+                    M
+                </span>
+
+                <span class="logo-text">
+                    MOTION
+                    <small>STUDIO</small>
+                </span>
+
+            </a>
+
+            <div class="desktop-navigation">
+
+                <div class="nav-links">
+
+                    <span class="active-indicator"></span>
+
+                    <a
+                        href="#home"
+                        class="nav-link active"
+                        data-section="home"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="nav-link"
+                        data-section="about"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="nav-link"
+                        data-section="services"
+                    >
+                        Services
+                    </a>
+
+                    <a
+                        href="#work"
+                        class="nav-link"
+                        data-section="work"
+                    >
+                        Work
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="nav-link"
+                        data-section="contact"
+                    >
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <a href="#contact" class="contact-button">
+
+                    <span>
+                        Start a project
+                    </span>
+
+                    <span class="contact-arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+                    <span class="toggle-line line-top"></span>
+                    <span class="toggle-line line-middle"></span>
+                    <span class="toggle-line line-bottom"></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+        <div class="mobile-panel">
+
+            <div class="mobile-panel-inner">
+
+                <div class="mobile-navigation">
+
+                    <a
+                        href="#home"
+                        class="mobile-link active"
+                        data-section="home"
+                    >
+                        <span class="mobile-number">01</span>
+                        <span>Home</span>
+                        <span class="mobile-arrow">↗</span>
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="mobile-link"
+                        data-section="about"
+                    >
+                        <span class="mobile-number">02</span>
+                        <span>About</span>
+                        <span class="mobile-arrow">↗</span>
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="mobile-link"
+                        data-section="services"
+                    >
+                        <span class="mobile-number">03</span>
+                        <span>Services</span>
+                        <span class="mobile-arrow">↗</span>
+                    </a>
+
+                    <a
+                        href="#work"
+                        class="mobile-link"
+                        data-section="work"
+                    >
+                        <span class="mobile-number">04</span>
+                        <span>Work</span>
+                        <span class="mobile-arrow">↗</span>
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="mobile-link"
+                        data-section="contact"
+                    >
+                        <span class="mobile-number">05</span>
+                        <span>Contact</span>
+                        <span class="mobile-arrow">↗</span>
+                    </a>
+
+                </div>
+
+                <div class="mobile-footer">
+
+                    <span>
+                        Anime.js Motion Lab
+                    </span>
+
+                    <span>
+                        Project 07
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero-section page-section" id="home">
+
+            <div class="background-grid"></div>
+
+            <div class="glow glow-one"></div>
+            <div class="glow glow-two"></div>
+
+            <div class="hero-content">
+
+                <div class="series-label">
+
+                    <span class="series-dot"></span>
+
+                    ANIME.JS MOTION LAB
+
+                </div>
+
+                <div class="project-label">
+                    PROJECT 07
+                </div>
+
+                <h1>
+                    Animated
+                    <span>Navbar</span>
+                </h1>
+
+                <p>
+                    A responsive glass navigation with smooth indicators,
+                    magnetic links, scroll effects and an animated mobile menu.
+                </p>
+
+                <a href="#about" class="explore-button">
+
+                    Explore navigation
+
+                    <span>
+                        ↓
+                    </span>
+
+                </a>
+
+            </div>
+
+            <div class="scroll-hint">
+                Scroll to test the navbar
+            </div>
+
+        </section>
+
+        <section class="page-section content-section" id="about">
+
+            <div class="section-number">
+                02
+            </div>
+
+            <div>
+                <span class="section-label">
+                    ABOUT
+                </span>
+
+                <h2>
+                    Motion makes interfaces feel alive.
+                </h2>
+
+                <p>
+                    The navigation reacts to scrolling, clicking and pointer
+                    movement while keeping every transition smooth.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="page-section content-section" id="services">
+
+            <div class="section-number">
+                03
+            </div>
+
+            <div>
+                <span class="section-label">
+                    SERVICES
+                </span>
+
+                <h2>
+                    Design, animation and interaction.
+                </h2>
+
+                <p>
+                    Each navigation element uses subtle motion to provide
+                    visual feedback without distracting from the content.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="page-section content-section" id="work">
+
+            <div class="section-number">
+                04
+            </div>
+
+            <div>
+                <span class="section-label">
+                    SELECTED WORK
+                </span>
+
+                <h2>
+                    Interfaces built to be remembered.
+                </h2>
+
+                <p>
+                    Active sections are detected automatically and the navbar
+                    indicator moves to the correct navigation link.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="page-section content-section contact-section" id="contact">
+
+            <div class="section-number">
+                05
+            </div>
+
+            <div>
+                <span class="section-label">
+                    CONTACT
+                </span>
+
+                <h2>
+                    Let's create something that moves.
+                </h2>
+
+                <p>
+                    This final section demonstrates the complete scrolling
+                    behavior of the animated navigation.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
