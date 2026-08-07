@@ -1622,3 +1622,180 @@ button {
             scale(1.08);
     }
 }
+
+.navbar-preview{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at top,#2b1f59 0%,#09090d 65%);
+}
+
+.navbar-preview-glow{
+    position:absolute;
+    top:-70px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:#8b5cf6;
+
+    opacity:.16;
+
+    filter:blur(60px);
+
+    animation:
+        navbarGlow 4s ease-in-out infinite alternate;
+}
+
+.navbar-preview-bar{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    width:90%;
+
+    margin-top:18px;
+    padding:10px 14px;
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+}
+
+.navbar-preview-logo{
+    display:grid;
+    place-items:center;
+
+    width:34px;
+    height:34px;
+
+    border-radius:10px;
+
+    color:#050509;
+
+    font-size:.75rem;
+    font-weight:800;
+
+    background:linear-gradient(135deg,#22d3ee,#8b5cf6);
+
+    animation:
+        navbarLogo 3s ease-in-out infinite;
+}
+
+.navbar-preview-links{
+    position:relative;
+
+    display:flex;
+    gap:18px;
+
+    color:rgba(255,255,255,.75);
+
+    font-size:.45rem;
+    font-weight:700;
+}
+
+.navbar-preview-active{
+    position:absolute;
+    left:-6px;
+    top:-5px;
+
+    width:44px;
+    height:22px;
+
+    border-radius:999px;
+
+    background:rgba(139,92,246,.35);
+
+    animation:
+        navbarIndicator 4s ease-in-out infinite;
+}
+
+.navbar-preview-button{
+    display:grid;
+    place-items:center;
+
+    width:28px;
+    height:28px;
+
+    border-radius:50%;
+
+    color:#050509;
+
+    font-size:.75rem;
+    font-weight:700;
+
+    background:#ffffff;
+}
+
+.navbar-preview-title{
+    position:absolute;
+    left:24px;
+    bottom:22px;
+
+    color:#ffffff;
+
+    font-size:1.25rem;
+    font-weight:800;
+
+    letter-spacing:-.05em;
+}
+
+@keyframes navbarGlow{
+
+    from{
+        transform:
+            translateX(-50%)
+            scale(.9);
+    }
+
+    to{
+        transform:
+            translateX(-50%)
+            scale(1.15);
+    }
+
+}
+
+@keyframes navbarLogo{
+
+    0%,100%{
+        transform:rotate(-4deg);
+    }
+
+    50%{
+        transform:rotate(4deg);
+    }
+
+}
+
+@keyframes navbarIndicator{
+
+    0%,20%{
+        transform:translateX(0);
+    }
+
+    30%,45%{
+        transform:translateX(58px);
+    }
+
+    55%,70%{
+        transform:translateX(118px);
+    }
+
+    80%,100%{
+        transform:translateX(0);
+    }
+
+}
