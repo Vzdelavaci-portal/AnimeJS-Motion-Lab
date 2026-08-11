@@ -1799,3 +1799,286 @@ button {
     }
 
 }
+
+.scramble-preview {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #092016 0%,
+            #040806 55%,
+            #020302 100%
+        );
+}
+
+.scramble-preview-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.4;
+
+    background-image:
+        linear-gradient(
+            rgba(92, 255, 141, 0.05) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(92, 255, 141, 0.05) 1px,
+            transparent 1px
+        );
+
+    background-size: 28px 28px;
+}
+
+.scramble-preview-glow {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: #5cff8d;
+
+    opacity: 0.11;
+    filter: blur(55px);
+
+    animation:
+        scramblePreviewGlow
+        3s ease-in-out infinite alternate;
+}
+
+.scramble-terminal {
+    position: relative;
+    z-index: 2;
+
+    width: 86%;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(92, 255, 141, 0.18);
+
+    border-radius: 14px;
+
+    background:
+        rgba(3, 10, 6, 0.88);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(92, 255, 141, 0.06);
+}
+
+.scramble-terminal-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 10px;
+
+    border-bottom:
+        1px solid rgba(92, 255, 141, 0.1);
+}
+
+.scramble-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.scramble-dots span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+}
+
+.scramble-dots span:nth-child(1) {
+    background: #ff5f57;
+}
+
+.scramble-dots span:nth-child(2) {
+    background: #febc2e;
+}
+
+.scramble-dots span:nth-child(3) {
+    background: #28c840;
+}
+
+.scramble-status {
+    color: #5cff8d;
+
+    font-family: monospace;
+    font-size: 0.4rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.scramble-terminal-body {
+    padding: 20px 15px 17px;
+}
+
+.scramble-command {
+    display: block;
+
+    color: #55715f;
+
+    font-family: monospace;
+    font-size: 0.42rem;
+
+    letter-spacing: 0.08em;
+}
+
+.scramble-demo {
+    display: flex;
+    align-items: center;
+
+    min-height: 58px;
+}
+
+.scramble-demo-text {
+    position: relative;
+
+    color: #5cff8d;
+
+    font-family: monospace;
+    font-size: clamp(
+        0.8rem,
+        2.5vw,
+        1.15rem
+    );
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 12px rgba(92, 255, 141, 0.45);
+
+    animation:
+        scramblePreviewText
+        4s steps(1) infinite;
+}
+
+.scramble-cursor {
+    width: 2px;
+    height: 20px;
+
+    margin-left: 5px;
+
+    background: #5cff8d;
+
+    box-shadow:
+        0 0 10px #5cff8d;
+
+    animation:
+        scramblePreviewCursor
+        0.8s steps(1) infinite;
+}
+
+.scramble-meta {
+    padding-top: 8px;
+
+    border-top:
+        1px solid rgba(92, 255, 141, 0.08);
+
+    color: #405347;
+
+    font-family: monospace;
+    font-size: 0.36rem;
+
+    letter-spacing: 0.1em;
+}
+
+/* TEXT SCRAMBLE SIMULATION */
+
+@keyframes scramblePreviewText {
+
+    0% {
+        color: transparent;
+    }
+
+    5% {
+        color: #5cff8d;
+
+        text-shadow:
+            -2px 0 #ff4f6d,
+            2px 0 #32e6ff;
+    }
+
+    10% {
+        opacity: 0.45;
+
+        transform:
+            translateX(-2px);
+    }
+
+    15% {
+        opacity: 1;
+
+        transform:
+            translateX(2px);
+    }
+
+    20% {
+        transform:
+            translateX(-1px);
+
+        text-shadow:
+            -1px 0 #ff4f6d,
+            1px 0 #32e6ff;
+    }
+
+    27% {
+        transform:
+            translateX(0);
+
+        text-shadow:
+            0 0 12px rgba(92, 255, 141, 0.5);
+    }
+
+    100% {
+        color: #5cff8d;
+
+        transform:
+            translateX(0);
+
+        text-shadow:
+            0 0 12px rgba(92, 255, 141, 0.5);
+    }
+}
+
+@keyframes scramblePreviewCursor {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scramblePreviewGlow {
+
+    from {
+        transform:
+            scale(0.8);
+
+        opacity: 0.08;
+    }
+
+    to {
+        transform:
+            scale(1.2);
+
+        opacity: 0.16;
+    }
+}
