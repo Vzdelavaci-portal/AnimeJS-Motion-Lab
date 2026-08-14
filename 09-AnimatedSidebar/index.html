@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Responsive animated sidebar dashboard built with Anime.js."
+    >
+
+    <title>Animated Sidebar | AnimeJS Motion Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <div
+            class="mobile-backdrop"
+            aria-hidden="true"
+        ></div>
+
+        <aside
+            class="sidebar"
+            aria-label="Application sidebar"
+        >
+
+            <div class="sidebar-top">
+
+                <a
+                    href="#"
+                    class="brand"
+                    aria-label="Motion Lab home"
+                >
+                    <span class="brand-mark">
+                        M
+                    </span>
+
+                    <span class="brand-copy">
+                        <strong>
+                            Motion
+                        </strong>
+
+                        <small>
+                            Studio
+                        </small>
+                    </span>
+                </a>
+
+                <button
+                    class="collapse-button"
+                    type="button"
+                    aria-label="Collapse sidebar"
+                    aria-expanded="true"
+                >
+                    <span class="collapse-arrow">
+                        ←
+                    </span>
+                </button>
+
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <span class="active-indicator"></span>
+
+                <button
+                    class="nav-item active"
+                    type="button"
+                    data-view="dashboard"
+                >
+                    <span class="nav-icon">
+                        ◇
+                    </span>
+
+                    <span class="nav-label">
+                        Dashboard
+                    </span>
+
+                    <span class="nav-meta">
+                        01
+                    </span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    type="button"
+                    data-view="analytics"
+                >
+                    <span class="nav-icon">
+                        ◉
+                    </span>
+
+                    <span class="nav-label">
+                        Analytics
+                    </span>
+
+                    <span class="nav-meta">
+                        02
+                    </span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    type="button"
+                    data-view="projects"
+                >
+                    <span class="nav-icon">
+                        ▣
+                    </span>
+
+                    <span class="nav-label">
+                        Projects
+                    </span>
+
+                    <span class="nav-meta">
+                        03
+                    </span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    type="button"
+                    data-view="animations"
+                >
+                    <span class="nav-icon">
+                        ✦
+                    </span>
+
+                    <span class="nav-label">
+                        Animations
+                    </span>
+
+                    <span class="notification-badge">
+                        8
+                    </span>
+                </button>
+
+                <button
+                    class="nav-item"
+                    type="button"
+                    data-view="messages"
+                >
+                    <span class="nav-icon">
+                        ✉
+                    </span>
+
+                    <span class="nav-label">
+                        Messages
+                    </span>
+
+                    <span class="nav-meta">
+                        05
+                    </span>
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <button
+                    class="nav-item settings-item"
+                    type="button"
+                    data-view="settings"
+                >
+                    <span class="nav-icon">
+                        ⚙
+                    </span>
+
+                    <span class="nav-label">
+                        Settings
+                    </span>
+
+                    <span class="nav-meta">
+                        06
+                    </span>
+                </button>
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        ST
+                    </div>
+
+                    <div class="profile-copy">
+                        <strong>
+                            Stefan
+                        </strong>
+
+                        <span>
+                            Motion Creator
+                        </span>
+                    </div>
+
+                    <button
+                        class="profile-more"
+                        type="button"
+                        aria-label="Open profile menu"
+                    >
+                        •••
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <main class="dashboard">
+
+            <header class="topbar">
+
+                <button
+                    class="mobile-menu-button"
+                    type="button"
+                    aria-label="Open sidebar"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div>
+
+                    <div class="series-label">
+                        <span class="series-dot"></span>
+                        ANIME.JS MOTION LAB
+                    </div>
+
+                    <div class="project-number">
+                        PROJECT 09
+                    </div>
+
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button
+                        class="icon-button"
+                        type="button"
+                        aria-label="Notifications"
+                    >
+                        ◌
+
+                        <span class="tiny-dot"></span>
+                    </button>
+
+                    <button
+                        class="new-button"
+                        type="button"
+                    >
+                        <span>
+                            New project
+                        </span>
+
+                        <span class="new-button-icon">
+                            +
+                        </span>
+                    </button>
+
+                </div>
+
+            </header>
+
+            <section class="dashboard-view">
+
+                <div class="view-heading">
+
+                    <div>
+
+                        <span class="view-kicker">
+                            OVERVIEW
+                        </span>
+
+                        <h1 class="view-title">
+                            Dashboard
+                        </h1>
+
+                    </div>
+
+                    <p class="view-description">
+                        A responsive animated workspace with a dynamic sidebar,
+                        active navigation and smooth Anime.js transitions.
+                    </p>
+
+                </div>
+
+                <div class="stats-grid">
+
+                    <article class="stat-card">
+                        <span class="stat-label">
+                            PROJECTS
+                        </span>
+
+                        <strong class="stat-number">
+                            24
+                        </strong>
+
+                        <span class="stat-change positive">
+                            +12.8%
+                        </span>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-label">
+                            ANIMATIONS
+                        </span>
+
+                        <strong class="stat-number">
+                            148
+                        </strong>
+
+                        <span class="stat-change positive">
+                            +18.2%
+                        </span>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-label">
+                            VIEWS
+                        </span>
+
+                        <strong class="stat-number">
+                            82K
+                        </strong>
+
+                        <span class="stat-change positive">
+                            +7.4%
+                        </span>
+                    </article>
+
+                    <article class="stat-card">
+                        <span class="stat-label">
+                            ACTIVE
+                        </span>
+
+                        <strong class="stat-number">
+                            09
+                        </strong>
+
+                        <span class="stat-change neutral">
+                            LIVE
+                        </span>
+                    </article>
+
+                </div>
+
+                <div class="content-grid">
+
+                    <article class="activity-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <span class="card-label">
+                                    ACTIVITY
+                                </span>
+
+                                <h2>
+                                    Motion Performance
+                                </h2>
+                            </div>
+
+                            <span class="card-period">
+                                LAST 7 DAYS
+                            </span>
+
+                        </div>
+
+                        <div class="chart">
+
+                            <div class="chart-line"></div>
+
+                            <span class="chart-point point-1"></span>
+                            <span class="chart-point point-2"></span>
+                            <span class="chart-point point-3"></span>
+                            <span class="chart-point point-4"></span>
+                            <span class="chart-point point-5"></span>
+
+                        </div>
+
+                        <div class="chart-axis">
+                            <span>MON</span>
+                            <span>TUE</span>
+                            <span>WED</span>
+                            <span>THU</span>
+                            <span>FRI</span>
+                        </div>
+
+                    </article>
+
+                    <article class="focus-card">
+
+                        <span class="card-label">
+                            CURRENT FOCUS
+                        </span>
+
+                        <div class="focus-orbit">
+
+                            <div class="orbit-ring ring-one"></div>
+                            <div class="orbit-ring ring-two"></div>
+
+                            <div class="focus-core">
+                                09
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            Animated Sidebar
+                        </strong>
+
+                        <span>
+                            Anime.js Motion Lab
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+</body>
+</html>
