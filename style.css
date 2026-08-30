@@ -2355,3 +2355,230 @@ button {
         opacity: 0.14;
     }
 }
+
+.gooey-preview {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(184, 255, 61, 0.08),
+            transparent 52%
+        ),
+        #07070c;
+}
+
+.gooey-preview-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.28;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 24px 24px;
+}
+
+.gooey-preview-core {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 180px;
+    height: 160px;
+}
+
+.gooey-preview-field {
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    place-items: center;
+
+    filter: url("#previewGooey");
+}
+
+.gooey-mini-blob,
+.gooey-mini-center {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e0ff90,
+            #b8ff3d
+        );
+
+    box-shadow:
+        0 0 20px rgba(184, 255, 61, 0.22);
+}
+
+.gooey-mini-blob {
+    width: 34px;
+    height: 34px;
+}
+
+.gooey-mini-center {
+    width: 64px;
+    height: 64px;
+}
+
+.blob-a {
+    animation:
+        gooeyBlobA
+        3.8s ease-in-out infinite;
+}
+
+.blob-b {
+    animation:
+        gooeyBlobB
+        4.1s ease-in-out infinite;
+}
+
+.blob-c {
+    animation:
+        gooeyBlobC
+        3.6s ease-in-out infinite;
+}
+
+.blob-d {
+    animation:
+        gooeyBlobD
+        4.3s ease-in-out infinite;
+}
+
+.gooey-mini-center {
+    animation:
+        gooeyCenterPulse
+        2.2s ease-in-out infinite alternate;
+}
+
+.gooey-preview-value {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #080a06;
+
+    font-family: monospace;
+
+    pointer-events: none;
+}
+
+.gooey-preview-value strong {
+    font-size: 1.3rem;
+}
+
+.gooey-preview-value span {
+    margin-bottom: 2px;
+    margin-left: 2px;
+
+    font-size: 0.5rem;
+}
+
+.gooey-preview-label {
+    position: absolute;
+    right: 17px;
+    bottom: 15px;
+
+    color: #b8ff3d;
+
+    font-family: monospace;
+    font-size: 0.42rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+@keyframes gooeyBlobA {
+
+    0%,
+    100% {
+        transform:
+            translate(-58px, -35px)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-30px, -14px)
+            scale(1.12);
+    }
+}
+
+@keyframes gooeyBlobB {
+
+    0%,
+    100% {
+        transform:
+            translate(52px, -38px)
+            scale(0.95);
+    }
+
+    50% {
+        transform:
+            translate(28px, -12px)
+            scale(1.08);
+    }
+}
+
+@keyframes gooeyBlobC {
+
+    0%,
+    100% {
+        transform:
+            translate(54px, 42px)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(28px, 19px)
+            scale(1.15);
+    }
+}
+
+@keyframes gooeyBlobD {
+
+    0%,
+    100% {
+        transform:
+            translate(-52px, 42px)
+            scale(0.92);
+    }
+
+    50% {
+        transform:
+            translate(-27px, 18px)
+            scale(1.1);
+    }
+}
+
+@keyframes gooeyCenterPulse {
+
+    from {
+        transform: scale(0.94);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+}
