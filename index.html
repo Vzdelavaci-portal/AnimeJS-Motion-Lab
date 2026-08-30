@@ -903,6 +903,113 @@
 
 </a>
 
+                <a
+    href="11-GooeyLoader/index.html"
+    class="project-card"
+    data-category="loader"
+>
+
+    <div class="project-preview gooey-preview">
+
+        <svg
+            class="gooey-preview-filter"
+            width="0"
+            height="0"
+            aria-hidden="true"
+        >
+            <defs>
+
+                <filter id="previewGooey">
+
+                    <feGaussianBlur
+                        in="SourceGraphic"
+                        stdDeviation="8"
+                        result="blur"
+                    />
+
+                    <feColorMatrix
+                        in="blur"
+                        mode="matrix"
+                        values="
+                            1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 22 -9
+                        "
+                        result="goo"
+                    />
+
+                    <feComposite
+                        in="SourceGraphic"
+                        in2="goo"
+                        operator="atop"
+                    />
+
+                </filter>
+
+            </defs>
+        </svg>
+
+        <div class="gooey-preview-grid"></div>
+
+        <div class="gooey-preview-core">
+
+            <div class="gooey-preview-field">
+
+                <span class="gooey-mini-blob blob-a"></span>
+                <span class="gooey-mini-blob blob-b"></span>
+                <span class="gooey-mini-blob blob-c"></span>
+                <span class="gooey-mini-blob blob-d"></span>
+
+                <span class="gooey-mini-center"></span>
+
+            </div>
+
+            <div class="gooey-preview-value">
+                <strong>64</strong>
+                <span>%</span>
+            </div>
+
+        </div>
+
+        <div class="gooey-preview-label">
+            LIQUID LOADER
+        </div>
+
+    </div>
+
+    <div class="project-content">
+
+        <div class="project-number">
+            11
+        </div>
+
+        <h3>
+            Gooey Loader
+        </h3>
+
+        <p>
+            A liquid loading animation where glowing blobs merge,
+            orbit and collapse into a final pulse.
+        </p>
+
+        <div class="project-footer">
+
+            <div class="tags">
+                <span>Anime.js</span>
+                <span>SVG</span>
+                <span>Gooey</span>
+            </div>
+
+            <span class="open-project">
+                Open Demo →
+            </span>
+
+        </div>
+
+    </div>
+
+</a>
             </div>
 
         </section>
