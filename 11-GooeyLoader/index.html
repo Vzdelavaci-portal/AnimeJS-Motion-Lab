@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Liquid gooey loader built with Anime.js and SVG filters."
+    >
+
+    <title>Gooey Loader | AnimeJS Motion Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <svg
+        class="svg-filters"
+        width="0"
+        height="0"
+        aria-hidden="true"
+    >
+        <defs>
+
+            <filter id="gooey">
+                <feGaussianBlur
+                    in="SourceGraphic"
+                    stdDeviation="12"
+                    result="blur"
+                />
+
+                <feColorMatrix
+                    in="blur"
+                    mode="matrix"
+                    values="
+                        1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 24 -10
+                    "
+                    result="goo"
+                />
+
+                <feComposite
+                    in="SourceGraphic"
+                    in2="goo"
+                    operator="atop"
+                />
+            </filter>
+
+        </defs>
+    </svg>
+
+    <main class="scene">
+
+        <div class="background-grid"></div>
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+
+        <section class="content">
+
+            <div class="series-label">
+                <span class="series-dot"></span>
+                ANIME.JS MOTION LAB
+            </div>
+
+            <div class="project-number">
+                PROJECT 11
+            </div>
+
+            <h1>
+                Gooey
+                <span>Loader</span>
+            </h1>
+
+            <p class="description">
+                A liquid loading animation where glowing blobs merge,
+                orbit and collapse into one final pulse.
+            </p>
+
+            <div class="loader-panel">
+
+                <div class="loader-top">
+
+                    <div>
+                        <span class="loader-label">
+                            SYSTEM STATUS
+                        </span>
+
+                        <strong class="loader-status">
+                            INITIALIZING
+                        </strong>
+                    </div>
+
+                    <button
+                        class="replay-button"
+                        type="button"
+                    >
+                        <span>
+                            REPLAY
+                        </span>
+
+                        <span class="replay-icon">
+                            ↻
+                        </span>
+                    </button>
+
+                </div>
+
+                <div class="loader-stage">
+
+                    <div class="gooey-wrapper">
+
+                        <div class="gooey-field">
+
+                            <span class="blob blob-one"></span>
+                            <span class="blob blob-two"></span>
+                            <span class="blob blob-three"></span>
+                            <span class="blob blob-four"></span>
+                            <span class="blob blob-five"></span>
+
+                            <span class="blob-center"></span>
+
+                        </div>
+
+                        <div class="loader-center">
+
+                            <span class="loader-value">
+                                00
+                            </span>
+
+                            <span class="loader-percent">
+                                %
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="loader-copy">
+
+                        <strong>
+                            LOADING EXPERIENCE
+                        </strong>
+
+                        <span class="loading-message">
+                            Preparing motion engine...
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="progress-track">
+                    <span class="progress-bar"></span>
+                </div>
+
+                <div class="loader-meta">
+
+                    <span>
+                        SVG FILTER
+                    </span>
+
+                    <span>
+                        LIQUID MOTION
+                    </span>
+
+                    <span>
+                        ANIME.JS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="corner-label corner-left">
+            HTML · CSS · JAVASCRIPT
+        </div>
+
+        <div class="corner-label corner-right">
+            GOOEY MOTION EXPERIMENT
+        </div>
+
+    </main>
+
+    <script
+        type="module"
+        src="script.js"
+    ></script>
+
+</body>
+</html>
