@@ -1,0 +1,640 @@
+@import url(
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+);
+
+:root {
+    --bg: #050509;
+    --text: #ffffff;
+    --muted: #8c8999;
+    --border: rgba(255,255,255,.09);
+
+    --cyan: #22d3ee;
+    --purple: #8b5cf6;
+    --pink: #ec4899;
+    --lime: #b8ff3d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    color: var(--text);
+
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 70% 40%,
+            #151128,
+            #08070e 45%,
+            #030305 100%
+        );
+}
+
+button {
+    font: inherit;
+}
+
+.scene {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    min-height: 100vh;
+
+    padding: 50px 30px;
+
+    overflow: hidden;
+}
+
+.grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: .35;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black,
+            transparent 80%
+        );
+}
+
+.glow {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    filter: blur(130px);
+
+    opacity: .12;
+
+    pointer-events: none;
+}
+
+.glow-left {
+    top: -200px;
+    left: -180px;
+
+    background: var(--purple);
+}
+
+.glow-right {
+    right: -180px;
+    bottom: -200px;
+
+    background: var(--cyan);
+}
+
+.layout {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(320px, .8fr)
+        minmax(500px, 1.2fr);
+
+    align-items: center;
+
+    gap: 70px;
+
+    width: min(1180px, 100%);
+}
+
+
+/* INTRO */
+
+.intro {
+    max-width: 460px;
+}
+
+.series {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    color: #aaa8b7;
+
+    background:
+        rgba(255,255,255,.035);
+
+    font-size: .62rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+}
+
+.series span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 14px var(--cyan);
+}
+
+.project {
+    margin-top: 30px;
+
+    color: var(--lime);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: .65rem;
+
+    font-weight: 700;
+
+    letter-spacing: .18em;
+}
+
+h1 {
+    margin-top: 8px;
+
+    font-size:
+        clamp(
+            5rem,
+            9vw,
+            8rem
+        );
+
+    line-height: .82;
+
+    letter-spacing: -.08em;
+}
+
+h1 span {
+    display: block;
+
+    color: transparent;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--cyan),
+            var(--lime)
+        );
+
+    background-size: 200%;
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+}
+
+.intro > p {
+    max-width: 430px;
+
+    margin-top: 28px;
+
+    color: var(--muted);
+
+    line-height: 1.75;
+
+    font-size: .94rem;
+}
+
+
+/* CONTROLS */
+
+.controls {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.controls button {
+    padding: 11px 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.04);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: .55rem;
+
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background:
+        rgba(255,255,255,.08);
+}
+
+#speedButton strong {
+    color: var(--lime);
+}
+
+
+/* INFO */
+
+.info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 14px;
+
+    margin-top: 45px;
+}
+
+.info div {
+    padding-top: 14px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+small {
+    display: block;
+
+    color: #5f5d69;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: .43rem;
+
+    letter-spacing: .12em;
+}
+
+.info strong {
+    display: block;
+
+    margin-top: 6px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: .6rem;
+}
+
+.active {
+    color: var(--lime);
+}
+
+
+/* PANEL */
+
+.panel {
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.015)
+        );
+
+    box-shadow:
+        0 40px 100px
+        rgba(0,0,0,.5);
+
+    backdrop-filter:
+        blur(22px);
+}
+
+.panel header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.panel header strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: .66rem;
+}
+
+.live {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--lime);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: .52rem;
+
+    font-weight: 700;
+}
+
+.live span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--lime);
+
+    box-shadow:
+        0 0 12px var(--lime);
+}
+
+
+/* DNA */
+
+.dna-area {
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    height: 650px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(34,211,238,.07),
+            transparent 55%
+        );
+}
+
+.dna-area::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.035);
+
+    border-radius: 50%;
+}
+
+.dna-area::after {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.025);
+
+    border-radius: 50%;
+}
+
+.axis {
+    position: absolute;
+
+    width: 1px;
+    height: 82%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(255,255,255,.12),
+            transparent
+        );
+}
+
+#dna {
+    position: relative;
+
+    z-index: 3;
+
+    width: 500px;
+    height: 620px;
+
+    overflow: visible;
+}
+
+.backbone {
+    filter:
+        url("#glow");
+}
+
+.dna-connection {
+    stroke-linecap: round;
+
+    filter:
+        url("#glow");
+}
+
+.dna-node {
+    filter:
+        url("#glow");
+}
+
+
+/* DNA LABEL */
+
+.dna-label {
+    position: absolute;
+
+    z-index: 5;
+
+    padding: 7px 11px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 999px;
+
+    color: #777583;
+
+    background:
+        rgba(5,5,9,.7);
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: .47rem;
+
+    letter-spacing: .12em;
+}
+
+.label-one {
+    top: 40px;
+    right: 35px;
+}
+
+.label-two {
+    bottom: 40px;
+    left: 35px;
+}
+
+
+/* FOOTER */
+
+.panel footer {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    border-top:
+        1px solid var(--border);
+}
+
+.panel footer div {
+    padding: 16px 20px;
+}
+
+.panel footer div + div {
+    border-left:
+        1px solid var(--border);
+}
+
+.panel footer strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-family:
+        "Space Mono",
+        monospace;
+
+    font-size: .61rem;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .scene {
+        padding:
+            50px 18px;
+    }
+
+    h1 {
+        font-size:
+            clamp(
+                4rem,
+                22vw,
+                6rem
+            );
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .dna-area {
+        height: 520px;
+    }
+
+    #dna {
+        width: 390px;
+        height: 500px;
+    }
+
+    .panel footer {
+        grid-template-columns: 1fr;
+    }
+
+    .panel footer div + div {
+        border-left: 0;
+
+        border-top:
+            1px solid var(--border);
+    }
+
+    .dna-label {
+        display: none;
+    }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DNA Helix | AnimeJS Motion Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="scene">
+
+    <div class="grid"></div>
+    <div class="glow glow-left"></div>
+    <div class="glow glow-right"></div>
+
+    <section class="layout">
+
+        <!-- LEFT SIDE -->
+
+        <div class="intro">
+
+            <div class="series">
+                <span></span>
+                ANIME.JS MOTION LAB
+            </div>
+
+            <div class="project">
+                PROJECT 12
+            </div>
+
+            <h1>
+                DNA
+                <span>Helix</span>
+            </h1>
+
+            <p>
+                A generative double helix visualization built
+                with SVG, JavaScript and Anime.js.
+            </p>
+
+            <div class="controls">
+
+                <button id="pauseButton">
+                    PAUSE
+                </button>
+
+                <button id="speedButton">
+                    SPEED
+                    <strong>1×</strong>
+                </button>
+
+            </div>
+
+            <div class="info">
+
+                <div>
+                    <small>STRUCTURE</small>
+                    <strong>DOUBLE HELIX</strong>
+                </div>
+
+                <div>
+                    <small>BASE PAIRS</small>
+                    <strong>22</strong>
+                </div>
+
+                <div>
+                    <small>STATUS</small>
+                    <strong
+                        id="status"
+                        class="active"
+                    >
+                        ACTIVE
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DNA PANEL -->
+
+        <div class="panel">
+
+            <header>
+
+                <div>
+                    <small>
+                        GENETIC VISUALIZATION
+                    </small>
+
+                    <strong>
+                        DNA SEQUENCE
+                    </strong>
+                </div>
+
+                <div class="live">
+                    <span></span>
+                    LIVE
+                </div>
+
+            </header>
+
+
+            <div class="dna-area">
+
+                <div class="axis"></div>
+
+                <svg
+                    id="dna"
+                    viewBox="0 0 500 650"
+                >
+
+                    <defs>
+
+                        <filter
+                            id="glow"
+                            x="-100%"
+                            y="-100%"
+                            width="300%"
+                            height="300%"
+                        >
+
+                            <feGaussianBlur
+                                stdDeviation="4"
+                                result="blur"
+                            />
+
+                            <feMerge>
+                                <feMergeNode
+                                    in="blur"
+                                />
+
+                                <feMergeNode
+                                    in="SourceGraphic"
+                                />
+                            </feMerge>
+
+                        </filter>
+
+                        <linearGradient
+                            id="strandA"
+                            x1="0"
+                            y1="0"
+                            x2="0"
+                            y2="1"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#22d3ee"
+                            />
+
+                            <stop
+                                offset="50%"
+                                stop-color="#8b5cf6"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#22d3ee"
+                            />
+
+                        </linearGradient>
+
+                        <linearGradient
+                            id="strandB"
+                            x1="0"
+                            y1="0"
+                            x2="0"
+                            y2="1"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#ec4899"
+                            />
+
+                            <stop
+                                offset="50%"
+                                stop-color="#b8ff3d"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#ec4899"
+                            />
+
+                        </linearGradient>
+
+                    </defs>
+
+
+                    <!-- BASE PAIRS -->
+
+                    <g id="connections"></g>
+
+
+                    <!-- BACKBONES -->
+
+                    <path
+                        id="pathA"
+                        class="backbone"
+                        fill="none"
+                        stroke="url(#strandA)"
+                        stroke-width="8"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        id="pathB"
+                        class="backbone"
+                        fill="none"
+                        stroke="url(#strandB)"
+                        stroke-width="8"
+                        stroke-linecap="round"
+                    />
+
+
+                    <!-- NODES -->
+
+                    <g id="nodes"></g>
+
+                </svg>
+
+
+                <div class="dna-label label-one">
+                    A — T
+                </div>
+
+                <div class="dna-label label-two">
+                    G — C
+                </div>
+
+            </div>
+
+
+            <footer>
+
+                <div>
+                    <small>ROTATION</small>
+                    <strong id="rotation">
+                        000°
+                    </strong>
+                </div>
+
+                <div>
+                    <small>SEQUENCE</small>
+                    <strong>
+                        AT · GC · TA
+                    </strong>
+                </div>
+
+                <div>
+                    <small>SPEED</small>
+                    <strong id="speedValue">
+                        1.0×
+                    </strong>
+                </div>
+
+            </footer>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script
+    type="module"
+    src="script.js"
+></script>
+
+</body>
+</html>
