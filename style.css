@@ -2582,3 +2582,202 @@ button {
         transform: scale(1.06);
     }
 }
+
+
+.dna-preview {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(34, 211, 238, 0.08),
+            transparent 55%
+        ),
+        #07070c;
+}
+
+.dna-preview-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.26;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        24px 24px;
+}
+
+.dna-mini {
+    position: relative;
+
+    width: 105px;
+    height: 145px;
+}
+
+.dna-strand {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 4px;
+
+    border-radius: 999px;
+}
+
+.dna-a {
+    left: 34px;
+
+    background:
+        linear-gradient(
+            #22d3ee,
+            #8b5cf6,
+            #22d3ee
+        );
+
+    animation:
+        dnaStrandA
+        2.8s
+        ease-in-out
+        infinite;
+}
+
+.dna-b {
+    right: 34px;
+
+    background:
+        linear-gradient(
+            #ec4899,
+            #b8ff3d,
+            #ec4899
+        );
+
+    animation:
+        dnaStrandB
+        2.8s
+        ease-in-out
+        infinite;
+}
+
+.dna-rung {
+    position: absolute;
+
+    left: 26px;
+
+    width: 53px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #22d3ee,
+            #8b5cf6,
+            #ec4899
+        );
+
+    transform-origin: center;
+
+    box-shadow:
+        0 0 10px
+        rgba(34,211,238,.25);
+}
+
+.rung-1 {
+    top: 16px;
+    transform: rotate(28deg);
+}
+
+.rung-2 {
+    top: 38px;
+    transform: rotate(-25deg);
+}
+
+.rung-3 {
+    top: 60px;
+    transform: rotate(-8deg);
+}
+
+.rung-4 {
+    top: 82px;
+    transform: rotate(25deg);
+}
+
+.rung-5 {
+    top: 104px;
+    transform: rotate(-27deg);
+}
+
+.rung-6 {
+    top: 126px;
+    transform: rotate(8deg);
+}
+
+.dna-preview-label {
+    position: absolute;
+
+    right: 16px;
+    bottom: 14px;
+
+    color: #22d3ee;
+
+    font-family: monospace;
+
+    font-size: .42rem;
+
+    font-weight: 700;
+
+    letter-spacing: .13em;
+}
+
+@keyframes dnaStrandA {
+
+    0%,
+    100% {
+        transform:
+            translateX(-18px)
+            skewY(10deg)
+            scaleY(.98);
+    }
+
+    50% {
+        transform:
+            translateX(18px)
+            skewY(-10deg)
+            scaleY(1.02);
+    }
+}
+
+@keyframes dnaStrandB {
+
+    0%,
+    100% {
+        transform:
+            translateX(18px)
+            skewY(-10deg)
+            scaleY(1.02);
+    }
+
+    50% {
+        transform:
+            translateX(-18px)
+            skewY(10deg)
+            scaleY(.98);
+    }
+}
